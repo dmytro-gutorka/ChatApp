@@ -10,5 +10,4 @@ router.use('/auth', authRouter);
 router.use('/messages', messagesRouter);
 
 
-
 export { router as rootRouter }
