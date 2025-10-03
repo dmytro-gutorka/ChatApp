@@ -1,9 +1,12 @@
 import './App.css'
+import {socket} from "./app/sockets";
 
 const prodUrl = 'https://chat-app-gtdb8.sevalla.app'
 const devUrl = 'http://localhost:3000'
 
 function App() {
+
+    socket.emit('connection')
 
     async function handleClick() {
         window.location.href = `${devUrl}/api/v1/auth/google`

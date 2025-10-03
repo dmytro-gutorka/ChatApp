@@ -8,10 +8,21 @@ import dotenv from 'dotenv'
 import helmet from "helmet";
 import passport from './strategies/google.js'
 import path from 'path'
+import http from 'http'
+import { Server as IOServer } from 'socket.io'
 
 dotenv.config()
 
 const app = express()
+
+const httpServer = http.createServer(app)
+const io = new IOServer(httpServer, {
+    cors: {
+        origin: process.env.CLIENT_URL,
+        credentials: true
+    }
+})
+
 const port = process.env.PORT || 3000
 const __dirname = path.resolve()
 
@@ -36,13 +47,22 @@ app.use(passport.session())
 
 app.use('/api/v1', rootRouter)
 
+io.on('connection', (socket) => {
+    console.log(`Socket connected ${socket.id}`)
+})
+
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../frontend/dist')))
     app.get(/^\/(?!api\/v1).*/, (req, res) =>
         res.sendFile(path.join(__dirname, '../frontend/', 'dist', 'index.html')))
 }
 
-app.listen(port, async () => {
+httpServer.listen(port, async() => {
     console.log(`Server is running on port: ${port}`)
     await connectDb()
 })
+
+// app.listen(port, async () => {
+//     console.log(`Server is running on port: ${port}`)
+//     await connectDb()
+// })
