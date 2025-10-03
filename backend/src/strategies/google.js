@@ -8,7 +8,6 @@ passport.serializeUser((user, done) => {
     done(null, user.id);
 });
 
-
 passport.deserializeUser(async (id, done) => {
     try {
         const user = await User.findById(id);
@@ -17,7 +16,6 @@ passport.deserializeUser(async (id, done) => {
         done(e);
     }
 });
-
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
