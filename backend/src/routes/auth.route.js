@@ -1,20 +1,11 @@
 import passport from "../strategies/google.js";
 import express from 'express';
 import setAuthCookie from "../helpers/setAuthCookie.js";
+import jwt from "jsonwebtoken";
+import User from "../models/User.js";
 
 
 export const router = express.Router();
-
-// router.get('/signup', async (req, res) => {
-//     await User.create({ firstName: 'Dmytro', lastName: "Gutorka", password: '1234567890', email: 'dgutorka1@gmail.com' })
-//     const user = await User.findOne({ email: 'dgutorka1@gmail.com'})
-//     console.log(user)
-//     res.status(200).json({message: 'sign up'})
-// })
-//
-// router.get('/login', (req, res) => res.status(200).json({message: 'log in'}))
-// router.get('/logout', (req, res) => res.status(200).json({message: 'log out'}))
-
 
 
 router.get("/google",
@@ -30,3 +21,29 @@ router.get("/google/callback",
 router.get('/fail', (_req, res) => {
     res.status(401).send('Auth failed')
 });
+
+
+router.get('/logout', async (req, res) => {
+    req.logout(() => {})
+    res.clearCookie('auth_token', {
+        sameSite: 'lax',
+        secure: process.env.NODE_ENV === 'production',
+        domain: process.env.NODE_ENV === 'production' ? process.env.PROD_DOMAIN : undefined,
+    })
+    res.status(204).end()
+})
+
+
+router.get('/me', async (req, res) => {
+    const token = req.cookies['auth_token']
+
+    if (!token) return res.status(401).json({ message: 'Unauthorized' })
+
+    try {
+        const { sub } = jwt.verify(token, process.env.JWT_SECRET)
+        const user = await User.findById(sub) || null
+        res.status(200).json({ user })
+    } catch (error) {
+        res.status(401).json({ user: null })
+    }
+})
