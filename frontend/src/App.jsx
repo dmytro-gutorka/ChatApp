@@ -1,5 +1,9 @@
-import './App.css'
-import {socket} from "./app/sockets";
+import './styles/normalize.css'
+import './styles/styles.css'
+
+
+import {socket} from "./config/sockets";
+import Header from "./components/Header";
 
 const prodUrl = 'https://chat-app-gtdb8.sevalla.app'
 const devUrl = 'http://localhost:3000'
@@ -25,6 +29,7 @@ function App() {
 
   return (
     <>
+        <Header />
         <div>
             <button onClick={handleClick}>Google</button>
             <button onClick={handleMessage}>message</button>

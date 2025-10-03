@@ -1,0 +1,14 @@
+:root {
+    --color-grey-01: rgb(226 232 240);
+    --color-grey-02: '';
+    --color-grey-09: rgb(51 65 85);
+
+    --bgColor-button-primary: rgb(37 99 235);
+
+    --border: 1px solid var(--color-grey-01);
+}
+
+
+body {
+    font-family: 'Alan Sans', sans-serif;
+}

@@ -1,0 +1,8 @@
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    border: var(--border);
+}
+.header_button {
+    place-self: center;
+}
