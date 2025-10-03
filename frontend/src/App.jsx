@@ -4,6 +4,7 @@ import './styles/styles.css'
 
 import {socket} from "./config/sockets";
 import Header from "./components/Header";
+import AsideBar from "./components/AsideBar";
 
 const prodUrl = 'https://chat-app-gtdb8.sevalla.app'
 const devUrl = 'http://localhost:3000'
@@ -29,12 +30,17 @@ function App() {
 
   return (
     <>
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh'}}>
         <Header />
-        <div>
-            <button onClick={handleClick}>Google</button>
-            <button onClick={handleMessage}>message</button>
-            <button onClick={handleLogout}>Log out</button>
+        <AsideBar />
+
         </div>
+
+        {/*<div>*/}
+        {/*    <button onClick={handleClick}>Google</button>*/}
+        {/*    <button onClick={handleMessage}>message</button>*/}
+        {/*    <button onClick={handleLogout}>Log out</button>*/}
+        {/*</div>*/}
     </>
   )
 }

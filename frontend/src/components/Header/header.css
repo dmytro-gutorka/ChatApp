@@ -2,7 +2,18 @@
     display: flex;
     justify-content: space-between;
     border: var(--border);
+    padding-inline: 16px;
+    padding-block: 10px;
 }
 .header_button {
     place-self: center;
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--color-grey-09);
+}
+
+.header_button:hover {
+    background-color: var(--color-grey-03);
 }
