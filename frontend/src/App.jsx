@@ -6,17 +6,17 @@ const devUrl = 'http://localhost:3000'
 function App() {
 
     async function handleClick() {
-        window.location.href = `${prodUrl}/api/v1/auth/google`
+        window.location.href = `${devUrl}/api/v1/auth/google`
     }
 
     async function handleMessage() {
-        const url = `${prodUrl}/api/v1/messages/send`
+        const url = `${devUrl}/api/v1/messages/send`
         const response = await fetch(url, { credentials: 'include'})
          return await response.json()
     }
 
     async function handleLogout() {
-        const url = `${prodUrl}/api/v1/auth/logout`
+        const url = `${devUrl}/api/v1/auth/logout`
         await fetch(url, { method: 'GET', credentials: 'include'})
     }
 
