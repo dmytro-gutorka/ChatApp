@@ -16,7 +16,7 @@ const port = process.env.PORT || 3000
 const __dirname = path.resolve()
 
 app.use(helmet())
-app.use(cors({ origin: process.env.DEV_CLIENT_URL, credentials: true }))
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }))
 app.use(express.json())
 app.use(cookieParser())
 app.use(session({
@@ -27,7 +27,7 @@ app.use(session({
         httpOnly: true,
         sameSite: 'lax',
         secure: process.env.NODE_ENV === 'production',
-        domain: process.env.NODE_ENV === 'production' ? process.env.PROD_DOMAIN : undefined
+        domain: process.env.NODE_ENV === 'production' ? process.env.DOMAIN : undefined
     }
 }))
 

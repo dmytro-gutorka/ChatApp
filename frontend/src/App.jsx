@@ -1,19 +1,22 @@
 import './App.css'
 
+const prodUrl = 'https://chat-app-gtdb8.sevalla.app'
+const devUrl = 'http://localhost:3000'
+
 function App() {
 
     async function handleClick() {
-        window.location.href = 'http://localhost:3000/api/v1/auth/google'
+        window.location.href = `${prodUrl}/api/v1/auth/google`
     }
 
     async function handleMessage() {
-        const url = 'http://localhost:3000/api/v1/messages/send'
+        const url = `${prodUrl}/api/v1/messages/send`
         const response = await fetch(url, { credentials: 'include'})
          return await response.json()
     }
 
     async function handleLogout() {
-        const url = 'http://localhost:3000/api/v1/auth/logout'
+        const url = `${prodUrl}/api/v1/auth/logout`
         await fetch(url, { method: 'GET', credentials: 'include'})
     }
 

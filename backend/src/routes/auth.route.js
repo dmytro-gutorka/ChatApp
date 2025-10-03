@@ -15,7 +15,7 @@ router.get("/google/callback",
     passport.authenticate('google', { failureRedirect: '/api/v1/auth/fail'}),
     (req, res) => {
         setAuthCookie(res, { sub: req.user.id })
-        res.redirect(process.env.DEV_CLIENT_URL)
+        res.redirect(process.env.CLIENT_URL)
     })
 
 router.get('/fail', (_req, res) => {
@@ -28,7 +28,7 @@ router.get('/logout', async (req, res) => {
     res.clearCookie('auth_token', {
         sameSite: 'lax',
         secure: process.env.NODE_ENV === 'production',
-        domain: process.env.NODE_ENV === 'production' ? process.env.PROD_DOMAIN : undefined,
+        domain: process.env.NODE_ENV === 'production' ? process.env.DOMAIN : undefined,
     })
     res.status(204).end()
 })
