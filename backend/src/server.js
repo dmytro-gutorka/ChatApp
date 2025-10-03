@@ -1,15 +1,13 @@
 import { rootRouter } from "./routes/index.js";
 import { connectDb } from "./lib/db.js";
 import cookieParser from 'cookie-parser';
-// import passport from 'passport';
 import session from "express-session";
 import express from 'express'
 import cors from 'cors';
 import dotenv from 'dotenv'
 import helmet from "helmet";
-import path from 'path'
 import passport from './strategies/google.js'
-
+import path from 'path'
 
 dotenv.config()
 
@@ -18,7 +16,7 @@ const port = process.env.PORT || 3000
 const __dirname = path.resolve()
 
 app.use(helmet())
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }))
+app.use(cors({ origin: process.env.DEV_CLIENT_URL, credentials: true }))
 app.use(express.json())
 app.use(cookieParser())
 app.use(session({
@@ -36,12 +34,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-
-app.post("/auth/google", passport.authenticate('google'), (req, res) => {
-    console.log(req.body)
-    res.status(200).send({ message: 'ok' })
-})
-// app.use('/api/v1', rootRouter)
+app.use('/api/v1', rootRouter)
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../frontend/dist')))
