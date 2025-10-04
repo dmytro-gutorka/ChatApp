@@ -1,0 +1,26 @@
+.button--outlined {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button--outlined:hover {
+    background-color: #f5f5f5;
+}
+
+.button--contained {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-blue-09);
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.button--contained:hover {
+    opacity: 0.9;
+}

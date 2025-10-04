@@ -5,7 +5,8 @@ const chatSchema = new Schema({
         firstName: { type: String, required: true, trim: true },
         lastName: { type: String, required: true, trim: true },
     },
-    createdBy: { type: Types.ObjectId, ref: 'User' },
+    isSystem: { type: Boolean, default: false },
+    createdBy: { type: Types.ObjectId, ref: 'User', default: null },
     lastMessageAt: { type: Date },
 }, { timestamps: true });
 

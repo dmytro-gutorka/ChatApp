@@ -1,7 +1,6 @@
 .chat-search_container {
     position: relative;
     display: flex;
-
 }
 
 .chat-search {
@@ -25,9 +24,9 @@
 }
 
 .chat-search_icon {
+    transform: translateY(-50%);
     position: absolute;
+    stroke: var(--color-grey-06);
     left: 8px;
     top: 50%;
-    transform: translateY(-50%);
-    stroke: var(--color-grey-06);
 }

@@ -23,7 +23,6 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK_URL,
 }, async (_accessToken, _refreshToken, profile, done) => {
     try {
-        console.log('Google Profile', profile)
 
         const googleId = profile.id;
         const email = profile.emails?.[0]?.value;

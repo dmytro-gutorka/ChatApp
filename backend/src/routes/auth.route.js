@@ -3,6 +3,7 @@ import express from 'express';
 import setAuthCookie from "../helpers/setAuthCookie.js";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
+import {chatsSeed} from "../helpers/chatsSeed.js";
 
 
 export const router = express.Router();
@@ -13,8 +14,9 @@ router.get("/google",
 
 router.get("/google/callback",
     passport.authenticate('google', { failureRedirect: '/api/v1/auth/fail'}),
-    (req, res) => {
+    async (req, res) => {
         setAuthCookie(res, { sub: req.user.id })
+        await chatsSeed(req.user.id)
         res.redirect(process.env.CLIENT_URL)
     })
 
