@@ -4,18 +4,19 @@ import './styles/buttons.css'
 
 import Header from "./components/Header";
 import AsideBar from "./components/AsideBar";
-import ChatSearch from "./components/ChatSearch";
+import {Outlet} from "react-router";
 
 
-function App() {
+function Layout() {
   return (
     <>
-        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh'}}>
-            <Header />
+        <Header />
+        <div style={{ display: 'flex', flexDirection: 'row', height: '100vh'}}>
             <AsideBar />
+            <Outlet/>
         </div>
     </>
   )
 }
 
-export default App
+export default Layout

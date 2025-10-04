@@ -1,5 +1,5 @@
 .aside-bar {
-    flex: 1;
+    flex: 0.3;
     border-right: var(--border);
     width: 300px;
     padding: 10px;
@@ -8,15 +8,6 @@
 
 .aside_container {
     border-bottom: var(--border);
-}
-
-.aside_new-chat-button {
-    background-color: var(--color-blue-09);
-    color: white;
-    padding: 6px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    border: none;
 }
 
 .aside_header {

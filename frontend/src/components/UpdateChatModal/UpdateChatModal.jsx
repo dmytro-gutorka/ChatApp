@@ -6,7 +6,7 @@ export default function UpdateChatModal({ chatData }) {
     return (
         <ModalRoot>
             <ModalRoot.OpenButton clsName="aside_edit-chat-button">
-                    <EditPencilOutlinedIcon size="14px"/>
+                <EditPencilOutlinedIcon size="14px"/>
             </ModalRoot.OpenButton>
             <ModalRoot.Container>
                 <ModalRoot.Header>Update your chat</ModalRoot.Header>

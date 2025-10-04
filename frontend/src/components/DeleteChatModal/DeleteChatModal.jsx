@@ -1,14 +1,32 @@
 import ModalRoot from "../Modal";
-import CreateChatForm from "../CreateChatForm";
+import TrashBinOutlinedIcon from "../../assets/svgIcons/TrashBinOutlinedIcon";
+import Button from "../Button";
+import deleteChat from "../../services/chats/deleteChat";
+import {useQueryClient} from "@tanstack/react-query";
 
-export default function DeleteChatModal() {
+export default function DeleteChatModal({chatId}) {
+    const queryClient = useQueryClient()
+
+    async function handleDeleteChat() {
+        await deleteChat(chatId)
+        await queryClient.invalidateQueries({ queryKey: ['chats'] })
+    }
+
     return (
         <ModalRoot>
-            <ModalRoot.OpenButton clsName="aside_new-chat-button" > New Chat</ModalRoot.OpenButton >
+            <ModalRoot.OpenButton clsName="chat-preview_delete-button">
+                <TrashBinOutlinedIcon size="14px"/>
+            </ModalRoot.OpenButton >
             <ModalRoot.Container>
-                <ModalRoot.Header>Create new chat</ModalRoot.Header>
+                <ModalRoot.Header subHeader=" You can't undo this action.">
+                    Are you sure you want to delete this chat ?
+                </ModalRoot.Header>
+
                 <ModalRoot.Content>
-                    {({ closeModal }) => <CreateChatForm action="create" onClose={closeModal} />}
+                    {({ closeModal }) => <Button clsName="button--contained" onClick={async () => {
+                        await handleDeleteChat()
+                        closeModal()
+                    }}>Delete chat</Button>}
                 </ModalRoot.Content>
             </ModalRoot.Container>
         </ModalRoot>

@@ -1,9 +1,9 @@
-import express from "express";
-import Chat from "../models/Chat.js";
+import { Types } from 'mongoose'
 import escapeRegex from "../helpers/escapeRegex.js";
 import requireAuth from "../middlewares/requireAuth.js";
-import { Types } from 'mongoose'
+import express from "express";
 import Message from "../models/Message.js";
+import Chat from "../models/Chat.js";
 
 export const router = express.Router();
 
@@ -67,7 +67,7 @@ router.delete('/:id', requireAuth, async (req, res) => {
         _id: chatId,
         $or: [
             { createdBy: Types.ObjectId.createFromHexString(userId) },
-            { isSystem: true}
+            { isSystem: true }
         ] }
 
     const chat = await Chat.findOneAndDelete(filter)

@@ -14,7 +14,9 @@
 .chat-preview_user-icon {
     border-radius: 50%;
     border: var(--border);
-
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
 }
 
 .chat-preview_container {
@@ -30,7 +32,7 @@
 .chat-preview_user-name {
     margin: 0;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .chat-preview_last-message {
@@ -53,7 +55,6 @@
 
 .chat-preview_edit-button:hover {
     background-color: var(--color-blue-03);
-
 }
 
 .chat-preview_buttons-container {

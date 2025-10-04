@@ -1,6 +1,5 @@
 export default function Button({ hasIcon = false, icon, clsName = '', children, onClick }) {
 
-
     const mergedCSSClasses = clsName + ' ' + (hasIcon ? 'button-with-icon' : '')
 
     return (

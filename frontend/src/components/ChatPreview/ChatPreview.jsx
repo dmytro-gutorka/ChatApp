@@ -1,12 +1,11 @@
 import './chatPreview.css'
-import Button from "../Button";
-import TrashBinOutlinedIcon from "../../assets/svgIcons/TrashBinOutlinedIcon";
+
 import UpdateChatModal from "../UpdateChatModal";
+import DeleteChatModal from "../DeleteChatModal";
 
 export default function ChatPreview({ data }) {
     const fullName = data.contact.firstName + ' ' + data.contact.lastName
 
-console.log(data)
     return (
         <li className="chat-preview" key={data?._id}>
             <div className="chat-preview_outer-container">
@@ -25,9 +24,7 @@ console.log(data)
 
                 <div className="chat-preview_buttons-container">
                     <UpdateChatModal chatData={data}/>
-                    <Button clsName="chat-preview_delete-button">
-                        <TrashBinOutlinedIcon size="14px"/>
-                    </Button>
+                    <DeleteChatModal chatId={data._id}/>
                 </div>
 
             </div>

@@ -19,7 +19,7 @@ button {
 }
 
 .button--contained {
-    padding: 8px 16px;
+    padding: 6px 16px;
     border-radius: 8px;
     border: none;
     background-color: var(--color-blue-09);
@@ -37,3 +37,4 @@ button {
     align-items: center;
     justify-content: center;
 }
+

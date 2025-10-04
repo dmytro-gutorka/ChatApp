@@ -1,7 +1,6 @@
 import './chatSearch.css'
 import SearchOutlinedIcon from "../../assets/svgIcons/SearchOutlinedIcon";
 import {useState} from "react";
-import useChats from "../../hooks/useChats";
 
 export default function ChatSearch() {
     const [search, setSearch] = useState('')
