@@ -4,6 +4,7 @@ import './styles/buttons.css'
 
 import Header from "./components/Header";
 import AsideBar from "./components/AsideBar";
+import ChatSearch from "./components/ChatSearch";
 
 
 function App() {

@@ -25,13 +25,7 @@ router.get('/', requireAuth, async (req, res) => {
     res.status(200).json({ chats })
 })
 
-
-
-
-
 router.post('/', requireAuth, async (req, res) => {
-    console.log(req.body.firstName)
-    console.log(req.body.lastName)
     const { firstName, lastName } = req.body;
 
     if (!firstName || !lastName) return res.status(401).json({ message: 'Both first name and last name are required' })
@@ -47,10 +41,11 @@ router.patch('/:id', requireAuth, async (req, res) => {
     const { id } = req.params;
     const { firstName, lastName } = req.body || {}
 
-    if (!firstName && !lastName) return res.status(400).json({ error: 'Nothing to update' });
+    console.log(firstName, lastName, id)
+    if (!firstName || !lastName) return res.status(400).json({ error: 'Nothing to update' });
 
     const chat = await Chat.findOneAndUpdate(
-        id, {
+        Types.ObjectId.createFromHexString(id), {
             $set: {
                 ...(firstName ? { 'contact.firstName': firstName } : {}),
                 ...(lastName ? { 'contact.lastName': lastName } : {}),
