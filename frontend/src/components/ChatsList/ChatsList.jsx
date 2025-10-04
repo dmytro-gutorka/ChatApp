@@ -1,15 +1,17 @@
+import './chatsList.css'
+
 import useChats from "../../hooks/useChats";
+import ChatPreview from "../ChatPreview";
 
 export default function ChatsList() {
 
-    // const { data, isSuccess } = useChats()
-    //
-    // if (!isSuccess) return <div>Loading...</div>
-    // console.log(data)
+    const { data, isSuccess } = useChats()
+
+    if (!isSuccess) return <div>Loading...</div>
 
     return (
-        <div>
-            chats
-        </div>
+        <ul className="chats-list">
+            {data?.chats?.map(chat => <ChatPreview data={chat}/>)}
+        </ul>
     )
 }

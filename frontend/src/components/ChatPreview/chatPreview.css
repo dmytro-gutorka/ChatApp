@@ -1,0 +1,62 @@
+.chat-preview_outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-preview {
+    padding-inline: 16px;
+    padding-block: 10px;
+}
+
+.chat-preview_user-icon {
+    border-radius: 50%;
+    border: var(--border);
+
+}
+
+.chat-preview_container {
+    display: flex;
+    gap: 8px;
+}
+
+.chat-preview_user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-preview_user-name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.chat-preview_last-message {
+    font-size: 12px;
+    color: var(--color-grey-09);
+}
+
+.chat-preview .active {
+    background-color: var(--color-blue-03);
+}
+
+.chat-preview_delete-button, .chat-preview_edit-button {
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.chat-preview_delete-button:hover {
+    background-color: var(--color-red-03);
+}
+
+.chat-preview_edit-button:hover {
+    background-color: var(--color-blue-03);
+
+}
+
+.chat-preview_buttons-container {
+    display: flex;
+    gap: 6px;
+}

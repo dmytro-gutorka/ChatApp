@@ -7,10 +7,11 @@
 
     --color-grey-09: rgb(51 65 85);
 
-
     --color-blue-03: rgb(219 235 255);
     --color-blue-04: rgb(191 219 254);
     --color-blue-09: rgb(37 99 235);
+
+    --color-red-03: rgb(254 226 226);
 
     --border: 1px solid var(--color-grey-01);
 }

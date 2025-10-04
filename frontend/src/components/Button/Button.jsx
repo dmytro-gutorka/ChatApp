@@ -6,7 +6,7 @@ export default function Button({ hasIcon = false, icon, clsName = '', children, 
     return (
         <button onClick={onClick} className={mergedCSSClasses}>
             {hasIcon && icon}
-            <span>{children}</span>
+            <span className="icon-container">{children}</span>
         </button>
     )
 }

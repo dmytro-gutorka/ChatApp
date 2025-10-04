@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-:where(ul, ol):where([class]) {
+ul, ol {
     padding-left: 0;
 }
 
@@ -17,7 +17,6 @@ body, html {
     height: 100%;
 }
 
-:where(
   h1,
   h2,
   h3,
@@ -27,8 +26,7 @@ body, html {
   p,
   ul,
   ol,
-  dl
-):where([class]) {
+  dl {
     margin-block: 0;
 }
 
@@ -41,7 +39,7 @@ body, html {
     border: none;
 }
 
-:where(ul[class]) {
+ul {
     list-style: none;
 }
 
@@ -98,23 +96,6 @@ button {
 }
 
 
-:where([fill]:not(
-  [fill="none"],
-  [fill^="url"]
-)) {
-    fill: currentColor;
-}
-
-:where([stroke]:not(
-  [stroke="none"],
-  [stroke^="url"]
-)) {
-    stroke: currentColor;
-}
-
-svg * {
-    transition-property: fill, stroke;
-}
 
 
 :where(table) {
