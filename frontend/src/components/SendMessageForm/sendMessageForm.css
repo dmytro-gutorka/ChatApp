@@ -1,0 +1,26 @@
+.send-message_form {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.send-message_button {
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-blue-09);
+    color: #fff;
+    transition: opacity 0.2s ease;
+}
+
+.send-message_input {
+    flex-grow: 1;
+    border: var(--border);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.send-message_input::placeholder {
+    color: var(--color-grey-05);
+}

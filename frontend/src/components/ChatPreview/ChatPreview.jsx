@@ -2,11 +2,14 @@ import './chatPreview.css'
 
 import UpdateChatModal from "../UpdateChatModal";
 import DeleteChatModal from "../DeleteChatModal";
+import {NavLink} from "react-router";
 
 export default function ChatPreview({ data }) {
     const fullName = data.contact.firstName + ' ' + data.contact.lastName
 
     return (
+
+        <NavLink className="chat-preview_link" to={`chat/${data._id}`}>
         <li className="chat-preview" key={data?._id}>
             <div className="chat-preview_outer-container">
 
@@ -29,5 +32,6 @@ export default function ChatPreview({ data }) {
 
             </div>
         </li>
+        </NavLink>
     )
 }

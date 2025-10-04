@@ -40,10 +40,6 @@
     color: var(--color-grey-09);
 }
 
-.chat-preview .active {
-    background-color: var(--color-blue-03);
-}
-
 .chat-preview_delete-button, .chat-preview_edit-button {
     padding: 3px;
     border-radius: 6px;
@@ -60,4 +56,16 @@
 .chat-preview_buttons-container {
     display: flex;
     gap: 6px;
+}
+
+.chat-preview_link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.chat-preview_link.active {
+    background-color: var(--color-blue-03);
+    border: 1px solid var(--color-blue-04);
+    border-radius: 6px;
 }

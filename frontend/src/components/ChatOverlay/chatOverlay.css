@@ -1,0 +1,9 @@
+.chat-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0.65;
+    height: 100%;
+    padding-bottom: 10px;
+    padding-inline: 16px;
+}

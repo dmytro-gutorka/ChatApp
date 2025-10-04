@@ -1,16 +1,16 @@
+import './chatOverlay.css'
+
 import ChatOverlayHeader from "../ChatOverlayHeader";
 import MessagesList from "../MessagesList";
-import SendMessageInput from "../SendMessageInput";
-import {useParams} from "react-router";
+import SendMessageForm from "../SendMessageForm";
 
 export default function ChatOverlay() {
-     const { chatId } = useParams()
 
     return (
-        <div>
+        <div className="chat-overlay">
             <ChatOverlayHeader/>
             <MessagesList/>
-            <SendMessageInput/>
+            <SendMessageForm/>
         </div>
     )
 

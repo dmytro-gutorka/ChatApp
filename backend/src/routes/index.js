@@ -9,8 +9,8 @@ const router = express.Router();
 
 
 router.use('/chats', chatsRouter);
+router.use('/chats', messagesRouter);
 router.use('/auth', authRouter);
-router.use('/messages', messagesRouter);
 
 
 export { router as rootRouter }

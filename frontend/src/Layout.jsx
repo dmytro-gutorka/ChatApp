@@ -9,13 +9,17 @@ import {Outlet} from "react-router";
 
 function Layout() {
   return (
-    <>
-        <Header />
-        <div style={{ display: 'flex', flexDirection: 'row', height: '100vh'}}>
-            <AsideBar />
-            <Outlet/>
-        </div>
-    </>
+      <>
+          <div style={{ height: '100%'}}>
+
+              <Header />
+              <div style={{ display: 'flex', height: '100%', flexDirection: 'row' ,justifyContent: 'space-between'}}>
+                  <AsideBar />
+                  <Outlet/>
+              </div>
+          </div>
+
+      </>
   )
 }
 
