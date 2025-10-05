@@ -1,38 +1,39 @@
 .messages_container {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    overflow-y: auto;
-    padding-inline: 16px;
-    padding-block: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-inline: 16px;
+  padding-block: 10px;
 }
 
 .message-receiver_container {
-    margin-right: 30px;
-    align-self: flex-start;
-    min-width: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--color-grey-05);
+  margin-right: 30px;
+  align-self: flex-start;
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--color-grey-05);
 }
 
 .message-sender_container {
-    margin-left: 30px;
-    align-self: flex-end;
-    min-width: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--color-blue-09);
-    color: #fff;
+  margin-left: 30px;
+  align-self: flex-end;
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--color-blue-09);
+  color: #fff;
 }
 
-.message-receiver_time-date, .message-receiver_time-date  {
-    font-size: 12px;
-    opacity: 0.7;
-    font-weight: 200;
+.message-receiver_time-date,
+.message-receiver_time-date {
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 200;
 }
 
-
-.message-receiver_text, .message-sender_text {
-    font-size: 14px;
+.message-receiver_text,
+.message-sender_text {
+  font-size: 14px;
 }

@@ -1,3 +1,3 @@
-import UpdateChatModal from './UpdateChatModal'
+import UpdateChatModal from './UpdateChatModal';
 
-export default UpdateChatModal
+export default UpdateChatModal;

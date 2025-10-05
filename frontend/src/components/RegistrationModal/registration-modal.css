@@ -1,42 +1,42 @@
 .registration-modal_container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to bottom right, #0f172a , #1e293b , #0f172a);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
 }
 
 .registration-modal_content {
-    min-width: 350px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  min-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .registration-modal_header {
-    font-size: 26px;
-    font-weight: 700;
-    text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .registration-modal_subheader {
-    color: var(--color-grey-07);
-    font-size: 14px;
-    text-align: center;
+  color: var(--color-grey-07);
+  font-size: 14px;
+  text-align: center;
 }
 
 .registration-modal_buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .registration-modal_google-button {
-    border: var(--border);
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 100;
+  border: var(--border);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 100;
 }

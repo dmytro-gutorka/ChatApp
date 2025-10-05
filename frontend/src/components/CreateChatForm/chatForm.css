@@ -1,24 +1,23 @@
 .chat-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-form_input {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .chat-form_input {
-    border: var(--border);
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 16px;
+  border: var(--border);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 .chat-form_input::placeholder {
-    color: var(--color-grey-05);
+  color: var(--color-grey-05);
 }
 
 .chat-form_label {
-    color: var(--color-grey-09);
-
+  color: var(--color-grey-09);
 }

@@ -1,3 +1,3 @@
-import EditPencilOutlinedIcon from './EditPencilOutlinedIcon'
+import EditPencilOutlinedIcon from './EditPencilOutlinedIcon';
 
-export default EditPencilOutlinedIcon
+export default EditPencilOutlinedIcon;

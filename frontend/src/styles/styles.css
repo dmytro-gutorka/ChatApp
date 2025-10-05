@@ -1,24 +1,23 @@
 :root {
-    --color-grey-01: rgb(226 232 240);
-    --color-grey-02: rgb(248 250 252);
-    --color-grey-03: rgb(241 245 249);
-    --color-grey-05: rgb(209, 209, 209);
-    --color-grey-06: rgb(203 213 225);
+  --color-grey-01: rgb(226 232 240);
+  --color-grey-02: rgb(248 250 252);
+  --color-grey-03: rgb(241 245 249);
+  --color-grey-05: rgb(209, 209, 209);
+  --color-grey-06: rgb(203 213 225);
 
-    --color-grey-07: rgb(157, 157, 157);
+  --color-grey-07: rgb(157, 157, 157);
 
-    --color-grey-09: rgb(51 65 85);
+  --color-grey-09: rgb(51 65 85);
 
-    --color-blue-03: rgb(219 235 255);
-    --color-blue-04: rgb(191 219 254);
-    --color-blue-09: rgb(37 99 235);
+  --color-blue-03: rgb(219 235 255);
+  --color-blue-04: rgb(191 219 254);
+  --color-blue-09: rgb(37 99 235);
 
-    --color-red-03: rgb(254 226 226);
+  --color-red-03: rgb(254 226 226);
 
-    --border: 1px solid var(--color-grey-01);
+  --border: 1px solid var(--color-grey-01);
 }
 
-
 body {
-    font-family: 'Alan Sans', sans-serif;
+  font-family: 'Alan Sans', sans-serif;
 }

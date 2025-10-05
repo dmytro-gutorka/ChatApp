@@ -1,45 +1,45 @@
 button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .button--outlined {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .button--outlined:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .button--contained {
-    padding: 6px 16px;
-    border-radius: 8px;
-    border: none;
-    background-color: var(--color-blue-09);
-    color: #fff;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-blue-09);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .button--contained:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 2px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }

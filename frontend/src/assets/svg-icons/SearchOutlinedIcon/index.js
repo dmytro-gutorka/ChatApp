@@ -1,3 +1,3 @@
-import SearchOutlinedIcon from './SearchOutlinedIcon'
+import SearchOutlinedIcon from './SearchOutlinedIcon';
 
-export default SearchOutlinedIcon
+export default SearchOutlinedIcon;

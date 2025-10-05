@@ -1,3 +1,3 @@
-import CreateChatForm from './CreateChatForm'
+import CreateChatForm from './CreateChatForm';
 
-export default CreateChatForm
+export default CreateChatForm;

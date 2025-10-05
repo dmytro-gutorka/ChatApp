@@ -1,3 +1,3 @@
-import ChatSearch from './ChatSearch'
+import ChatSearch from './ChatSearch';
 
-export default ChatSearch
+export default ChatSearch;

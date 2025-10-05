@@ -1,3 +1,3 @@
-import TrashBinOutlinedIcon from './TrashBinOutlinedIcon'
+import TrashBinOutlinedIcon from './TrashBinOutlinedIcon';
 
-export default TrashBinOutlinedIcon
+export default TrashBinOutlinedIcon;

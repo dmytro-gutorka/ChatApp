@@ -1,32 +1,32 @@
 .chat-search_container {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
 }
 
 .chat-search {
-    border: 1px solid var(--color-grey-06);
-    border-radius: 5px;
-    padding-block: 6px;
-    padding-left: 28px;
-    font-size: 16px;
-    color: var(--color-grey-09);
-    flex-grow: 1;
+  border: 1px solid var(--color-grey-06);
+  border-radius: 5px;
+  padding-block: 6px;
+  padding-left: 28px;
+  font-size: 16px;
+  color: var(--color-grey-09);
+  flex-grow: 1;
 }
 
 .chat-search:focus {
-    outline: none;
+  outline: none;
 }
 
 .chat-search::placeholder {
-    padding-inline: 2px;
-    font-size: 14px;
-    color: var(--color-grey-06);
+  padding-inline: 2px;
+  font-size: 14px;
+  color: var(--color-grey-06);
 }
 
 .chat-search_icon {
-    transform: translateY(-50%);
-    position: absolute;
-    stroke: var(--color-grey-06);
-    left: 8px;
-    top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  stroke: var(--color-grey-06);
+  left: 8px;
+  top: 50%;
 }

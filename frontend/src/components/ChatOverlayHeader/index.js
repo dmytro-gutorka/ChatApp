@@ -1,3 +1,3 @@
-import ChatOverlayHeader from './ChatOverlayHeader'
+import ChatOverlayHeader from './ChatOverlayHeader';
 
-export default ChatOverlayHeader
+export default ChatOverlayHeader;

@@ -1,18 +1,18 @@
 .aside-bar {
-    grid-area: 2 / 1 / 6 / 2;
-    border-right: var(--border);
-    overflow-y: auto;
-    padding-inline: 16px;
-    padding-block: 10px;
+  grid-area: 2 / 1 / 6 / 2;
+  border-right: var(--border);
+  overflow-y: auto;
+  padding-inline: 16px;
+  padding-block: 10px;
 }
 
 .aside_container {
-    border-bottom: var(--border);
-    padding-block: 10px;
+  border-bottom: var(--border);
+  padding-block: 10px;
 }
 
 .aside_header {
-    display: flex;
-    flex-direction: column;
-    gap: 12px
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

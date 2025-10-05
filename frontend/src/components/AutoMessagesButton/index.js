@@ -1,3 +1,3 @@
-import AutoMessagesButton from './AutoMessagesButton'
+import AutoMessagesButton from './AutoMessagesButton';
 
-export default AutoMessagesButton
+export default AutoMessagesButton;

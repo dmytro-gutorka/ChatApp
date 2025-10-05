@@ -1,3 +1,3 @@
-import ChatOverlay from './ChatOverlay'
+import ChatOverlay from './ChatOverlay';
 
-export default ChatOverlay
+export default ChatOverlay;

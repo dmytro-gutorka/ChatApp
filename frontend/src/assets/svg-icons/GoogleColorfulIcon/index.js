@@ -1,3 +1,3 @@
-import GoogleColorfulIcon from './GoogleColorfulIcon'
+import GoogleColorfulIcon from './GoogleColorfulIcon';
 
-export default GoogleColorfulIcon
+export default GoogleColorfulIcon;

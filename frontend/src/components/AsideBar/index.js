@@ -1,3 +1,3 @@
-import AsideBar from './AsideBar'
+import AsideBar from './AsideBar';
 
-export default AsideBar
+export default AsideBar;

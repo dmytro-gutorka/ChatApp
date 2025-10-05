@@ -1,3 +1,3 @@
-import LogoutOutlinedIcon from './LogoutOutlinedIcon'
+import LogoutOutlinedIcon from './LogoutOutlinedIcon';
 
-export default LogoutOutlinedIcon
+export default LogoutOutlinedIcon;

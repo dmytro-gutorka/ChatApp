@@ -1,3 +1,3 @@
-import PublicOnlyRoute from './PublicOnlyRoute'
+import PublicOnlyRoute from './PublicOnlyRoute';
 
-export default PublicOnlyRoute
+export default PublicOnlyRoute;

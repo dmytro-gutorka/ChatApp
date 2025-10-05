@@ -1,3 +1,3 @@
-import DeleteChatModal from './DeleteChatModal'
+import DeleteChatModal from './DeleteChatModal';
 
-export default DeleteChatModal
+export default DeleteChatModal;

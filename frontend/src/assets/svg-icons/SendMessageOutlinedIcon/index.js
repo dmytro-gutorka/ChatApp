@@ -1,3 +1,3 @@
-import SendMessageOutlinedIcon from './SendMessageOutlinedIcon'
+import SendMessageOutlinedIcon from './SendMessageOutlinedIcon';
 
-export default SendMessageOutlinedIcon
+export default SendMessageOutlinedIcon;

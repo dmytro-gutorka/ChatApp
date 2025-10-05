@@ -1,3 +1,3 @@
-import UpdateChatForm from './UpdateChatForm'
+import UpdateChatForm from './UpdateChatForm';
 
-export default UpdateChatForm
+export default UpdateChatForm;

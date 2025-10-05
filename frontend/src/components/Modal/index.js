@@ -1,3 +1,3 @@
-import ModalRoot from './provider'
+import ModalRoot from './provider';
 
-export default ModalRoot
+export default ModalRoot;

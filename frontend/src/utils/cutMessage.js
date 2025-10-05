@@ -1,3 +1,3 @@
 export default function cutMessage(message) {
-    return message?.split(' ').slice(0, 20).join(' ') + `${message?.length > 20 ? '...' : ''}`
+  return message?.split(' ').slice(0, 20).join(' ') + `${message?.length > 20 ? '...' : ''}`;
 }
