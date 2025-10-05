@@ -55,7 +55,7 @@ router.post('/:id/messages', async (req, res) => {
             isSystem: true,
             createdAt: auto.createdAt,
         })
-    }, 1000)
+    }, 3000)
 
     res.status(201).json({ message: 'Message sent'})
 })

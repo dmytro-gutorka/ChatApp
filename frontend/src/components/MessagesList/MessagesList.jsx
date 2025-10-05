@@ -9,8 +9,7 @@ export default function MessagesList() {
     const { onScroll, containerRef} =  useMessagesScroll(messages)
 
     return (
-        <div className="messages_container" ref={containerRef} onScroll={onScroll}
-        >
+        <div className="messages_container" ref={containerRef} onScroll={onScroll}>
              {messages?.map(message => {
                  const sentAt = new Date(message.createdAt).toLocaleString()
 

@@ -11,9 +11,9 @@ export default function ChatPreview({ data, onActiveChatId }) {
     const fullName = data.contact.firstName + ' ' + data.contact.lastName
     const shortenedMessaged = cutMessage(data?.lastMessageText)
 
-    // useEffect(() => {
-    //     socket.emit('join', data._id)
-    // }, [data._id])
+    useEffect(() => {
+        socket.emit('join', String(data._id))
+    }, [data._id])
 
     return (
         <li className="chat-preview">
