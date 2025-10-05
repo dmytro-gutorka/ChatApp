@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 
 export default function setAuthCookie(res, payload) {
-  console.log(payload);
   const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '7d' });
   res.cookie('auth_token', token, {
     sameSite: 'lax',
