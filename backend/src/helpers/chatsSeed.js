@@ -1,7 +1,8 @@
 import Chat from '../models/Chat.js';
 
 export async function chatsSeed(userId = null) {
-  const count = await Chat.countDocuments();
+  const count = await Chat.countDocuments({ createdBy: userId});
+
   if (count > 0) return;
   await Chat.insertMany([
     { contact: { firstName: 'Ada', lastName: 'Lovelace' }, createdBy: userId, isSystem: true },
