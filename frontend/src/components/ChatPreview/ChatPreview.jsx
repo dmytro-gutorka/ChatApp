@@ -10,7 +10,7 @@ export default function ChatPreview({ data }) {
     return (
 
         <NavLink className="chat-preview_link" to={`chat/${data._id}`}>
-        <li className="chat-preview" key={data?._id}>
+        <li className="chat-preview">
             <div className="chat-preview_outer-container">
 
                 <div className="chat-preview_container">

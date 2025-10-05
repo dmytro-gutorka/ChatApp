@@ -10,7 +10,7 @@ export default function ChatsList() {
 
     return (
         <ul className="chats-list">
-            {data?.chats?.map(chat => <ChatPreview data={chat}/>)}
+            {data?.chats?.map(chat => <ChatPreview key={chat._id} data={chat}/>)}
         </ul>
     )
 }

@@ -1,0 +1,32 @@
+.overlay-header_container {
+    border-bottom: var(--border);
+}
+
+.overlay-header_content {
+    display: flex;
+    gap: 10px;
+    padding-top: 4px;
+    padding-bottom: 10px;
+}
+
+.overlay-header_chat-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.overlay-header_status {
+    font-size: 12px;
+    color: var(--color-grey-09);
+}
+
+.overlay-header_user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.overlay-header_user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

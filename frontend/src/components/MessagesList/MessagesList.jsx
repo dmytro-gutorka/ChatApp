@@ -2,10 +2,11 @@ import useMessages from "../../hooks/useMessages";
 
 export default function MessagesList() {
 
-    const {data, isSuccess} = useMessages()
+    const {data: messages, isSuccess} = useMessages()
+
     if (!isSuccess) return <div>Loading...</div>
 
-    console.log(data)
+    console.log(messages)
 
     return (
         <div>Messages list</div>
