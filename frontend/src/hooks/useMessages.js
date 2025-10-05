@@ -5,7 +5,7 @@ import getMessages from "../services/messages/getMessages";
 export default function useMessages() {
     const { chatId } = useParams()
 
-    const queryKey = ['messages', chatId]
+    const queryKey = ['messages', String(chatId)]
 
     return useQuery({
         queryKey,

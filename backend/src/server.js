@@ -47,9 +47,14 @@ app.use(passport.session())
 
 app.use('/api/v1', rootRouter)
 
+app.set('io', io);
+
+
 io.on('connection', (socket) => {
-    console.log(`Socket connected ${socket.id}`)
-})
+    socket.on('join', (chatId) => socket.join(String(chatId)));
+    socket.on('leave', (chatId) => socket.leave(String(chatId)));
+});
+
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../frontend/dist')))
@@ -58,11 +63,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 httpServer.listen(port, async() => {
-    console.log(`Server is running on port: ${port}`)
+    console.log(`API + Socket.IO are running on: ${port}`)
     await connectDb()
 })
-
-// app.listen(port, async () => {
-//     console.log(`Server is running on port: ${port}`)
-//     await connectDb()
-// })
