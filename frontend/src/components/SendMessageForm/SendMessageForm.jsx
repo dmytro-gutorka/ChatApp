@@ -12,7 +12,10 @@ export default function SendMessageForm() {
 
     const { mutate: sendMessage} = useMutation({
         mutationFn: (text) => createMessage(chatId, text),
-        onSuccess: () => queryClient.invalidateQueries({ queryKey: ['messages', chatId] })
+        onSuccess: async () => {
+            await queryClient.invalidateQueries({ queryKey: ['chats'] })
+            await queryClient.invalidateQueries({ queryKey: ['messages', chatId] })
+        }
     })
 
     async function handleMessage(e) {

@@ -3,9 +3,11 @@ import './chatPreview.css'
 import UpdateChatModal from "../UpdateChatModal";
 import DeleteChatModal from "../DeleteChatModal";
 import {NavLink} from "react-router";
+import cutMessage from "../../utils/cutMessage";
 
 export default function ChatPreview({ data }) {
     const fullName = data.contact.firstName + ' ' + data.contact.lastName
+    const shortenedMessaged = cutMessage(data?.lastMessageText)
 
     return (
 
@@ -20,7 +22,7 @@ export default function ChatPreview({ data }) {
                             {fullName}
                         </p>
                         <p className="chat-preview_last-message">
-                            {data.lastMessageAt && data.lastMessageAt || 'no messages yet'}
+                            {data.lastMessageText ? shortenedMessaged : 'no messages yet'}
                         </p>
                     </div>
                 </div>

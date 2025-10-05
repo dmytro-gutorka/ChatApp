@@ -25,8 +25,9 @@ router.get('/fail', (_req, res) => {
 });
 
 
-router.get('/logout', async (req, res) => {
+router.post('/logout', async (req, res) => {
     req.logout(() => {})
+    console.log('Logged out')
     res.clearCookie('auth_token', {
         sameSite: 'lax',
         secure: process.env.NODE_ENV === 'production',

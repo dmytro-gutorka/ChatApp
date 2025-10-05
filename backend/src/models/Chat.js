@@ -8,6 +8,7 @@ const chatSchema = new Schema({
     isSystem: { type: Boolean, default: false },
     createdBy: { type: Types.ObjectId, ref: 'User', default: null },
     lastMessageAt: { type: Date },
+    lastMessageText: { type: String, default: null},
 }, { timestamps: true });
 
 

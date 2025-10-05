@@ -1,15 +1,23 @@
 import './header.css'
 import Button from "../Button";
 import LogoutOutlinedIcon from "../../assets/svgIcons/LogoutOutlinedIcon";
+import logout from "../../services/auth/logout";
+import {useAuthContext} from "../AuthGuard/AuthGuard";
 
 
 export default function Header() {
+    const { setUser } = useAuthContext()
+
+    function handleLogout() {
+        logout()
+        setUser(null)
+    }
 
     return (
         <header className="header">
             <div className="header_container">
                 <h2 className="header_title">Chat</h2>
-                <Button clsName="header_button" icon={<LogoutOutlinedIcon size="20px"/>} >Log out</Button>
+                <Button onClick={handleLogout} clsName="header_button" icon={<LogoutOutlinedIcon size="20px"/>} >Log out</Button>
             </div>
         </header>
     )

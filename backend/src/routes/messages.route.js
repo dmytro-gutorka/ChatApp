@@ -1,6 +1,7 @@
+import { Types } from 'mongoose'
 import express from 'express'
 import Message from "../models/Message.js";
-import { Types } from 'mongoose'
+import Chat from "../models/Chat.js";
 
 export const router = express.Router()
 
@@ -28,6 +29,10 @@ router.post('/:id/messages', async (req, res) => {
         chatId: Types.ObjectId.createFromHexString(id),
         authorId: Types.ObjectId.createFromHexString(userId),
         text,
+    })
+
+    await Chat.findByIdAndUpdate(Types.ObjectId.createFromHexString(id), {
+        $set: { lastMessageText: text }
     })
 
     res.status(201).json({ message: 'Message sent'})

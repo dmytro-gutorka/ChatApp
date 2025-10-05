@@ -1,30 +1,26 @@
-import {createContext, useContext, useEffect, useState} from "react";
-import {apiPaths} from "../../config/apiPaths";
-import {axiosInstance} from "../../config/axiosInstance";
+import {createContext, useContext, useState} from "react";
+import useUser from "../../hooks/useUser";
 
 const AuthContext = createContext({
     user: null,
     setUser: () => {}
 });
 
-export function useAuth() {
+export function useAuthContext() {
     return useContext(AuthContext);
 }
 
 export default function AuthGuard({children}) {
     const [user, setUser] = useState(null);
 
-    useEffect( () => {
-        (async function getUserData() {
-            const url = apiPaths.auth.getUser()
-            const response = await axiosInstance.get(url)
+    const {isLoading } = useUser(setUser)
 
-            setUser(response?.data)
-        })()
-    }, [])
+    if (isLoading) return null
 
     return (
-        <AuthContext.Provider value={{ user, setUser}}>{children}</AuthContext.Provider>
+        <AuthContext.Provider value={{ user, setUser, isLoading }}>
+            {children}
+        </AuthContext.Provider>
     )
 }
 

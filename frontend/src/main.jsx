@@ -10,10 +10,10 @@ const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <AuthGuard>
           <QueryClientProvider client={queryClient}>
+      <AuthGuard>
               <RouterProvider router={router} />
-          </QueryClientProvider>
       </AuthGuard>
+          </QueryClientProvider>
   </StrictMode>
 )
