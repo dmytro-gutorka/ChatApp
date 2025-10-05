@@ -4,7 +4,7 @@ import ChatOverlay from '../components/ChatOverlay';
 import RegistrationModal from '../components/RegistrationModal';
 import PublicOnlyRoute from '../components/PublicOnlyRoute';
 import PrivateRoute from '../components/PrivateRoute';
-import NoChatSelectedPlug from "../components/NoChatSelectedPlug";
+import NoChatSelectedPlug from '../components/NoChatSelectedPlug';
 
 export const router = createBrowserRouter([
   {

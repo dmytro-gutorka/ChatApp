@@ -3,7 +3,7 @@ import TrashBinOutlinedIcon from '../../assets/svg-icons/TrashBinOutlinedIcon';
 import Button from '../Button';
 import deleteChat from '../../services/chats/deleteChat';
 import { useQueryClient } from '@tanstack/react-query';
-import {useNavigate, useParams} from "react-router";
+import { useNavigate, useParams } from 'react-router';
 
 export default function DeleteChatModal({ chatId }) {
   const queryClient = useQueryClient();
@@ -13,7 +13,7 @@ export default function DeleteChatModal({ chatId }) {
     await queryClient.invalidateQueries({ queryKey: ['chats'] });
   }
   const navigate = useNavigate();
-  const { chatId: currentChatId } = useParams()
+  const { chatId: currentChatId } = useParams();
 
   return (
     <ModalRoot>

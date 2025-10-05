@@ -1,3 +1,3 @@
-import NoChatSelectedPlug from './NoChatSelectedPlug'
+import NoChatSelectedPlug from './NoChatSelectedPlug';
 
-export default NoChatSelectedPlug
+export default NoChatSelectedPlug;

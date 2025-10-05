@@ -6,7 +6,6 @@ export const AuthContext = createContext({
   setUser: () => {},
 });
 
-
 export default function AuthGuard({ children }) {
   const [user, setUser] = useState(null);
 

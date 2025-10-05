@@ -7,9 +7,8 @@ class ChatsService {
   async getChats(search, createdBy) {
     const [fname, lname] = search?.split(' ');
 
-    const ownerFilter = {
-      $or: [{ createdBy: Types.ObjectId.createFromHexString(createdBy) }, { isSystem: true }],
-    };
+    const ownerFilter = { createdBy: Types.ObjectId.createFromHexString(createdBy) }
+
 
     const nameFilter = search
       ? {

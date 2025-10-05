@@ -8,9 +8,12 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
-import passport from './strategies/google.js';
+
 import path from 'path';
 import http from 'http';
+import {googlePassport} from "./strategies/google.js";
+import {facebookPassport} from "./strategies/facebook.js";
+
 
 dotenv.config();
 
@@ -45,8 +48,12 @@ app.use(
   })
 );
 
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(googlePassport.initialize());
+app.use(googlePassport.session());
+//
+// app.use(facebookPassport.initialize());
+// app.use(facebookPassport.session());
+
 app.use('/api/v1', rootRouter);
 app.set('io', io);
 

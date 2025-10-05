@@ -5,8 +5,8 @@ export async function chatsSeed(userId = null) {
 
   if (count > 0) return;
   await Chat.insertMany([
-    { contact: { firstName: 'Ada', lastName: 'Lovelace' }, createdBy: userId, isSystem: true },
-    { contact: { firstName: 'Alan', lastName: 'Turing' }, createdBy: userId, isSystem: true },
-    { contact: { firstName: 'Grace', lastName: 'Hopper' }, createdBy: userId, isSystem: true },
+    { contact: { firstName: 'Ada', lastName: 'Lovelace' }, createdBy: userId },
+    { contact: { firstName: 'Alan', lastName: 'Turing' }, createdBy: userId },
+    { contact: { firstName: 'Grace', lastName: 'Hopper' }, createdBy: userId },
   ]);
 }

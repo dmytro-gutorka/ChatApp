@@ -3,13 +3,14 @@ import { chatsSeed } from '../helpers/chatsSeed.js';
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
-export async function googleCallback(req, res) {
+export async function Oauth2CallbackSuccess(req, res) {
   setAuthCookie(res, { sub: req.user.id });
   await chatsSeed(req.user.id);
   res.redirect(process.env.CLIENT_URL);
 }
 
-export async function googleCallbackFail(req, res) {
+
+export async function Oauth2CallbackFail(req, res) {
   res.status(401).send('Auth failed');
 }
 
@@ -37,3 +38,6 @@ export async function getMe(req, res) {
     res.status(401).json({ user: null });
   }
 }
+
+
+
