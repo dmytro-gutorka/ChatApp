@@ -1,4 +1,4 @@
-export default function SendMessageOutlinedIcon({ size = '22px' }) {
+export default function SendMessageOutlinedIcon({ size = '24px' }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

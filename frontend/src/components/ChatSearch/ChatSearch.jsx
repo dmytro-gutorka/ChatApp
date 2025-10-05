@@ -1,4 +1,4 @@
-import './chatSearch.css';
+import './chat-search.css';
 
 import SearchOutlinedIcon from '../../assets/svg-icons/SearchOutlinedIcon';
 

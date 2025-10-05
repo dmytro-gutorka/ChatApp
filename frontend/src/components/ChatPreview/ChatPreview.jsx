@@ -1,11 +1,11 @@
-import './chatPreview.css';
+import './chat-preview.css';
 
+import { useEffect } from 'react';
+import { NavLink } from 'react-router';
+import { socket } from '../../config/sockets';
 import UpdateChatModal from '../UpdateChatModal';
 import DeleteChatModal from '../DeleteChatModal';
-import { NavLink } from 'react-router';
 import cutMessage from '../../utils/cutMessage';
-import { useEffect } from 'react';
-import { socket } from '../../config/sockets';
 
 export default function ChatPreview({ data, onActiveChatId }) {
   const fullName = data.contact.firstName + ' ' + data.contact.lastName;

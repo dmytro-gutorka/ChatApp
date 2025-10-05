@@ -1,4 +1,4 @@
-import './sendMessageForm.css';
+import './send-message-form.css';
 
 import Button from '../Button';
 import SendMessageOutlinedIcon from '../../assets/svg-icons/SendMessageOutlinedIcon';

@@ -2,7 +2,7 @@ import './registration-modal.css';
 import Button from '../Button';
 import GoogleColorfulIcon from '../../assets/svg-icons/GoogleColorfulIcon';
 import loginGoogle from '../../services/auth/loginGoogle';
-import { useAuthContext } from '../AuthGuard/AuthGuard';
+import useAuthContext from "../../hooks/useAuthContext";
 
 export default function RegistrationModal() {
   const { isLoading } = useAuthContext();

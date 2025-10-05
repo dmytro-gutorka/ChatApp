@@ -1,8 +1,6 @@
 export const apiPaths = {
   auth: {
     logout: () => `/auth/logout`,
-    loginGoogle: () => `/auth/google`,
-    loginFacebook: () => `/auth/facebook`,
     getUser: () => `/auth/me`,
   },
   chats: {

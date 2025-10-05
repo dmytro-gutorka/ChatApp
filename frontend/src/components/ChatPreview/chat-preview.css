@@ -9,6 +9,8 @@
 .chat-preview {
   padding-inline: 16px;
   padding-block: 10px;
+  border: 1px solid transparent;
+  border-bottom: var(--border);
 }
 
 .chat-preview_user-icon {

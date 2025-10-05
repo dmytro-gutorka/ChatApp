@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from 'react-router';
-import { useAuthContext } from '../AuthGuard/AuthGuard';
+import useAuthContext from "../../hooks/useAuthContext";
 
 export default function PrivateRoute() {
   const { user } = useAuthContext();

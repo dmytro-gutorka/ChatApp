@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import ToastContainer from '../ToastContainer';
 
-const ToastCtx = createContext(null);
+export const ToastContext = createContext(null);
 
 export function ToastProvider({ children }) {
   const [toasts, setToasts] = useState([]);
@@ -34,15 +34,11 @@ export function ToastProvider({ children }) {
   };
 
   return (
-    <ToastCtx.Provider value={value}>
+    <ToastContext.Provider value={value}>
       {children}
       <ToastContainer toasts={toasts} onClose={remove} />
-    </ToastCtx.Provider>
+    </ToastContext.Provider>
   );
 }
 
-export function useToast() {
-  const ctx = useContext(ToastCtx);
-  if (!ctx) throw new Error('useToast must be used within ToastProvider');
-  return ctx;
-}
+

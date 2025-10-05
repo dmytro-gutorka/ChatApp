@@ -1,4 +1,4 @@
-import './asideBar.css';
+import './aside-bar.css';
 import ChatSearch from '../ChatSearch';
 import ChatsList from '../ChatsList';
 import CreateChatModal from '../CreateChatModal';

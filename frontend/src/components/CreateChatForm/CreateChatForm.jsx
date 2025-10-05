@@ -1,4 +1,4 @@
-import './chatForm.css';
+import './chat-form.css';
 
 import Button from '../Button';
 import createChat from '../../services/chats/createChat';

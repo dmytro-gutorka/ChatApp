@@ -1,4 +1,4 @@
-import './chatOverlay.css';
+import './chat-overlay.css';
 
 import ChatOverlayHeader from '../ChatOverlayHeader';
 import MessagesList from '../MessagesList';

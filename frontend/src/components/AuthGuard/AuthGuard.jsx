@@ -1,14 +1,11 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useState } from 'react';
 import useUser from '../../hooks/useUser';
 
-const AuthContext = createContext({
+export const AuthContext = createContext({
   user: null,
   setUser: () => {},
 });
 
-export function useAuthContext() {
-  return useContext(AuthContext);
-}
 
 export default function AuthGuard({ children }) {
   const [user, setUser] = useState(null);

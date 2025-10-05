@@ -2,7 +2,7 @@ import './header.css';
 import Button from '../Button';
 import LogoutOutlinedIcon from '../../assets/svg-icons/LogoutOutlinedIcon';
 import logout from '../../services/auth/logout';
-import { useAuthContext } from '../AuthGuard/AuthGuard';
+import useAuthContext from "../../hooks/useAuthContext";
 
 export default function Header() {
   const { setUser } = useAuthContext();

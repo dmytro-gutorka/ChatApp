@@ -9,7 +9,7 @@ export default function UpdateChatForm({ onClose, chatData }) {
     contact: { firstName, lastName },
     _id,
   } = chatData;
-  console.log(firstName, lastName);
+
   async function handleSubmit(e) {
     e.preventDefault();
 

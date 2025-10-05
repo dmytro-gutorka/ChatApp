@@ -7,7 +7,7 @@ export default function ChatOverlayHeader() {
         <img className="overlay-header_user-avatar" src="/user-chat-icon.png" alt="user avatar" />
 
         <div className="overlay-header_user-info">
-          <p className="overlay-header_chat-name">Dima Gutorka</p>
+          <p className="overlay-header_chat-name">Chat</p>
           <p className="overlay-header_status">Active now</p>
         </div>
       </div>

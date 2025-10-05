@@ -2,7 +2,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: minmax(330px, 350px) repeat(4, 1fr);
-  grid-template-rows: 70px repeat(4, 1fr);
+  grid-template-rows: 62px repeat(4, 1fr);
 }
 .layout_content {
   grid-area: 2 / 2 / 6 / 6;
