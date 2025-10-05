@@ -1,5 +1,6 @@
 .overlay-header_container {
     border-bottom: var(--border);
+    padding-inline: 16px;
 }
 
 .overlay-header_content {

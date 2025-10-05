@@ -1,6 +1,5 @@
 .layout {
     height: 100vh;
-
     display: grid;
     grid-template-columns: minmax(330px, 350px) repeat(4, 1fr);
     grid-template-rows: 70px repeat(4, 1fr);

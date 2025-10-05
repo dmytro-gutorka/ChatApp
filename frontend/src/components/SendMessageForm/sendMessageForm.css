@@ -4,26 +4,30 @@
     margin-top: auto;
     gap: 8px;
     padding: 10px;
+    border-top: var(--border);
+    align-items: center;
 }
 
 .send-message_button {
-    padding-block: 3px;
-    padding-inline: 8px;
+    padding-inline: 10px;
     border-radius: 50%;
     border: none;
     background-color: var(--color-blue-09);
     color: #fff;
     transition: opacity 0.2s ease;
+    width: 40px;
+    height: 40px;
 }
 
 .send-message_input {
     flex-grow: 1;
     border: var(--border);
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 50px;
     font-size: 16px;
 }
 
 .send-message_input::placeholder {
+    padding-inline: 10px;
     color: var(--color-grey-05);
 }
