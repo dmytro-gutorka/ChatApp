@@ -1,9 +1,9 @@
 .aside-bar {
-    flex: 0.33;
+    grid-area: 2 / 1 / 6 / 2;
     border-right: var(--border);
-    width: 300px;
-    padding: 10px;
     overflow-y: auto;
+    padding-inline: 16px;
+    padding-block: 10px;
 }
 
 .aside_container {

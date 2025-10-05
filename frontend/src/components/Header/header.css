@@ -1,3 +1,7 @@
+.header {
+    grid-area: 1 / 1 / 2 / 6;
+}
+
 .header_container {
     display: flex;
     justify-content: space-between;

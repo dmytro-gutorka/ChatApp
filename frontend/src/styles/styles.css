@@ -19,15 +19,4 @@
 
 body {
     font-family: 'Alan Sans', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-}
-
-
-.button-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 2px;
 }

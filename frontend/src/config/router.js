@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import Layout from "../Layout";
+import Layout from "../components/Layout";
 import ChatOverlay from "../components/ChatOverlay";
 
 

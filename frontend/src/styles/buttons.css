@@ -38,3 +38,8 @@ button {
     justify-content: center;
 }
 
+.button-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
