@@ -62,9 +62,11 @@
     display: block;
     text-decoration: none;
     color: inherit;
+
+    width: 100%;
 }
 
-.chat-preview_link.active {
+.chat-preview:has(.chat-preview_link.active) {
     background-color: var(--color-blue-03);
     border: 1px solid var(--color-blue-04);
     border-radius: 6px;

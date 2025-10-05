@@ -11,9 +11,9 @@ export default function ChatPreview({ data }) {
 
     return (
 
-        <NavLink className="chat-preview_link" to={`chat/${data._id}`}>
         <li className="chat-preview">
             <div className="chat-preview_outer-container">
+        <NavLink className="chat-preview_link" to={`chat/${data._id}`}>
 
                 <div className="chat-preview_container">
                     <img className="chat-preview_user-icon" src='/./user-chat-icon.png' alt="user avatar" width='42px' height='38px'/>
@@ -26,6 +26,7 @@ export default function ChatPreview({ data }) {
                         </p>
                     </div>
                 </div>
+        </NavLink>
 
                 <div className="chat-preview_buttons-container">
                     <UpdateChatModal chatData={data}/>
@@ -34,6 +35,5 @@ export default function ChatPreview({ data }) {
 
             </div>
         </li>
-        </NavLink>
     )
 }

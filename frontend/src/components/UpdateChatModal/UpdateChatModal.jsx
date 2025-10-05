@@ -5,7 +5,7 @@ import UpdateChatForm from "../UpdateChatForm";
 export default function UpdateChatModal({ chatData }) {
     return (
         <ModalRoot>
-            <ModalRoot.OpenButton clsName="aside_edit-chat-button">
+            <ModalRoot.OpenButton clsName="chat-preview_edit-button">
                 <EditPencilOutlinedIcon size="14px"/>
             </ModalRoot.OpenButton>
             <ModalRoot.Container>
