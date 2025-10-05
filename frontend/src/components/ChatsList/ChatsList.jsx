@@ -1,22 +1,21 @@
 import './chatsList.css'
 
-import useChats from "../../hooks/useChats";
-import ChatPreview from "../ChatPreview";
+import {socket} from "../../config/sockets";
 import {useDebouncedValue} from "../../hooks/useDebouncedValue";
 import {useQueryClient} from "@tanstack/react-query";
 import {useEffect, useState} from "react";
-import {socket} from "../../config/sockets";
 import {useToast} from "../Toast/Toast";
+import ChatPreview from "../ChatPreview";
+import useChats from "../../hooks/useChats";
 
 export default function ChatsList({ search}) {
     const [activeChatId, setActiveChatId] = useState(null)
     const debouncedSearch = useDebouncedValue(search, 300)
-    const { data } = useChats(debouncedSearch)
-
     const queryClient = useQueryClient()
 
-
+    const { data } = useChats(debouncedSearch)
     const { success: toastSuccess} = useToast()
+
 
     useEffect(() => {
         async function onNewMsg(msg) {
@@ -25,7 +24,9 @@ export default function ChatsList({ search}) {
 
             const currentChat = data?.chats?.find(chat => chat._id === msg.chatId)
 
-            if (msg.isSystem === true) toastSuccess(`New message in chat "${currentChat.contact.firstName} ${currentChat.contact.lastName}"`)
+            if (msg.isSystem === true)
+                toastSuccess(`New message in chat "${currentChat?.contact.firstName ?? msg.contact.firstName} 
+                ${currentChat?.contact.lastName ?? msg.contact.lastName}"`)
         }
 
         socket.off('message:new').on('message:new', onNewMsg);

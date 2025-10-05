@@ -1,5 +1,5 @@
 import ModalRoot from "../Modal";
-import TrashBinOutlinedIcon from "../../assets/svgIcons/TrashBinOutlinedIcon";
+import TrashBinOutlinedIcon from "../../assets/svg-icons/TrashBinOutlinedIcon";
 import Button from "../Button";
 import deleteChat from "../../services/chats/deleteChat";
 import {useQueryClient} from "@tanstack/react-query";

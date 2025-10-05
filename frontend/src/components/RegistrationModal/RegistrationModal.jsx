@@ -1,6 +1,6 @@
 import './registration-modal.css'
 import Button from "../Button";
-import GoogleColorfulIcon from "../../assets/svgIcons/GoogleColorfulIcon";
+import GoogleColorfulIcon from "../../assets/svg-icons/GoogleColorfulIcon";
 import loginGoogle from "../../services/auth/loginGoogle";
 import {useAuthContext} from "../AuthGuard/AuthGuard";
 

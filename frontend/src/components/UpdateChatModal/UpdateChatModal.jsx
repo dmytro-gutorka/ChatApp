@@ -1,5 +1,5 @@
 import ModalRoot from "../Modal";
-import EditPencilOutlinedIcon from "../../assets/svgIcons/EditPencilOutlinedIcon";
+import EditPencilOutlinedIcon from "../../assets/svg-icons/EditPencilOutlinedIcon";
 import UpdateChatForm from "../UpdateChatForm";
 
 export default function UpdateChatModal({ chatData }) {

@@ -1,8 +1,8 @@
+import { randomQuote } from "../helpers/getRandomQuote.js";
 import { Types } from 'mongoose'
 import express from 'express'
 import Message from "../models/Message.js";
 import Chat from "../models/Chat.js";
-import {randomQuote} from "../helpers/getRandomQuote.js";
 
 export const router = express.Router()
 

@@ -8,6 +8,7 @@
 
 .aside_container {
     border-bottom: var(--border);
+    padding-block: 10px;
 }
 
 .aside_header {

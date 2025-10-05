@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import ToastContainer from "../ToastContainer";
 
 
@@ -7,11 +7,11 @@ const ToastCtx = createContext(null);
 export function ToastProvider({ children }) {
     const [toasts, setToasts] = useState([]);
 
-    const remove = useCallback((id) => {
+    function remove(id) {
         setToasts(toast => toast.filter(t => t.id !== id));
-    }, []);
+    }
 
-    const push = useCallback((toast) => {
+    function push(toast) {
         const id = Math.random().toString(36).slice(2);
         setToasts(prev => {
             const next = [...prev, { id, ...toast }];
@@ -20,17 +20,18 @@ export function ToastProvider({ children }) {
         const ttl = toast.ttl ?? 3000;
         if (ttl > 0) setTimeout(() => remove(id), ttl);
         return id;
-    }, [remove]);
+    }
 
-    const make = useCallback((type) => (text, ttl) => push({ type, text, ttl }), [push]);
+    const make = (type) => (text, ttl) => push({ type, text, ttl })
 
-    const value = useMemo(() => ({
-        toasts, push, remove,
+    const value = {
+        toasts, push,
+        remove,
         success: make('success'),
         info: make('info'),
         warning: make('warning'),
         error: make('error'),
-    }), [toasts, push, remove, make]);
+    }
 
     return (
         <ToastCtx.Provider value={value}>

@@ -1,6 +1,6 @@
 import './chatSearch.css'
 
-import SearchOutlinedIcon from "../../assets/svgIcons/SearchOutlinedIcon";
+import SearchOutlinedIcon from "../../assets/svg-icons/SearchOutlinedIcon";
 
 export default function ChatSearch({ search, onSearch}) {
 

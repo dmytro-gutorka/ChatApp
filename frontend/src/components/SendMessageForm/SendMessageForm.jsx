@@ -1,7 +1,7 @@
 import './sendMessageForm.css'
 
 import Button from "../Button";
-import SendMessageOutlinedIcon from "../../assets/svgIcons/SendMessageOutlinedIcon";
+import SendMessageOutlinedIcon from "../../assets/svg-icons/SendMessageOutlinedIcon";
 import createMessage from "../../services/messages/createMessage";
 import {useMutation, useQueryClient} from "@tanstack/react-query";
 import {useParams} from "react-router";
