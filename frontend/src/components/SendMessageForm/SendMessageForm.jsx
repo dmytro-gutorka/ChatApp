@@ -12,14 +12,15 @@ export default function SendMessageForm() {
 
     const { mutate: sendMessage} = useMutation({
         mutationFn: (text) => createMessage(chatId, text),
+        onSuccess: () => queryClient.invalidateQueries({ queryKey: ['messages', chatId] })
+
     })
 
     async function handleMessage(e) {
         e.preventDefault()
 
         const text = e.target.message.value
-
-        await queryClient.invalidateQueries({ queryKey: ['messages', chatId] })
+        e.target.message.value = ''
 
         sendMessage(text)
     }
