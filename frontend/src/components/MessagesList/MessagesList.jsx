@@ -1,12 +1,15 @@
 import './messages-list.css'
+
 import useMessages from "../../hooks/useMessages";
+import useMessagesScroll from "../../hooks/useMessagesScroll";
 import React from "react";
 
 export default function MessagesList() {
-    const {data: messages} = useMessages()
+    const { data: messages } = useMessages()
+    const { onScroll, containerRef} =  useMessagesScroll(messages)
 
     return (
-        <div className="messages_container">
+        <div className="messages_container" ref={containerRef} onScroll={onScroll}>
              {messages?.map(message => {
                  const sentAt = new Date(message.createdAt).toLocaleString()
 

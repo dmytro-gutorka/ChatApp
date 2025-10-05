@@ -4,12 +4,13 @@ import '../../styles/buttons.css'
 import './layout.css'
 
 import Header from "../Header";
+import { Outlet } from "react-router";
 import AsideBar from "../AsideBar";
-import {Outlet} from "react-router";
 
 
 function Layout() {
-  return (
+
+    return (
       <div className="layout">
         <Header />
         <AsideBar />

@@ -4,6 +4,7 @@ import LogoutOutlinedIcon from "../../assets/svgIcons/LogoutOutlinedIcon";
 
 
 export default function Header() {
+
     return (
         <header className="header">
             <div className="header_container">

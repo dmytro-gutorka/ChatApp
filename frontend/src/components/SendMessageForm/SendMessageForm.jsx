@@ -2,9 +2,9 @@ import './sendMessageForm.css'
 
 import Button from "../Button";
 import SendMessageOutlinedIcon from "../../assets/svgIcons/SendMessageOutlinedIcon";
+import createMessage from "../../services/messages/createMessage";
 import {useMutation, useQueryClient} from "@tanstack/react-query";
 import {useParams} from "react-router";
-import createMessage from "../../services/messages/createMessage";
 
 export default function SendMessageForm() {
     const queryClient = useQueryClient()
@@ -13,7 +13,6 @@ export default function SendMessageForm() {
     const { mutate: sendMessage} = useMutation({
         mutationFn: (text) => createMessage(chatId, text),
         onSuccess: () => queryClient.invalidateQueries({ queryKey: ['messages', chatId] })
-
     })
 
     async function handleMessage(e) {
@@ -24,7 +23,6 @@ export default function SendMessageForm() {
 
         sendMessage(text)
     }
-
 
     return (
         <form className="send-message_form" onSubmit={handleMessage}>

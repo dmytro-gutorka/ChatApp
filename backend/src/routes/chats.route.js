@@ -7,7 +7,7 @@ import Chat from "../models/Chat.js";
 
 export const router = express.Router();
 
-router.get('/', requireAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     const search = (req.query?.search || '').trim();
     const createdBy = req.userId; const [fname, lname] = search?.split(' ');
 
@@ -25,7 +25,7 @@ router.get('/', requireAuth, async (req, res) => {
     res.status(200).json({ chats })
 })
 
-router.post('/', requireAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     const { firstName, lastName } = req.body;
 
     if (!firstName || !lastName) return res.status(401).json({ message: 'Both first name and last name are required' })
@@ -37,7 +37,7 @@ router.post('/', requireAuth, async (req, res) => {
 })
 
 
-router.patch('/:id', requireAuth, async (req, res) => {
+router.patch('/:id', async (req, res) => {
     const { id } = req.params;
     const { firstName, lastName } = req.body || {}
 
@@ -59,7 +59,7 @@ router.patch('/:id', requireAuth, async (req, res) => {
     res.status(200).json({ chat });
 })
 
-router.delete('/:id', requireAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     const { id: chatId } = req.params;
     const userId  = req.userId
 
