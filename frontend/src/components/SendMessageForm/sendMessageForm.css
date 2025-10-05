@@ -1,11 +1,14 @@
 .send-message_form {
     display: flex;
     flex-direction: row;
+    margin-top: auto;
     gap: 8px;
+    padding: 10px;
 }
 
 .send-message_button {
-    padding: 8px;
+    padding-block: 3px;
+    padding-inline: 8px;
     border-radius: 50%;
     border: none;
     background-color: var(--color-blue-09);

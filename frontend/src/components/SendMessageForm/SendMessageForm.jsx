@@ -19,9 +19,9 @@ export default function SendMessageForm() {
 
         const text = e.target.message.value
 
-        sendMessage(text)
-
         await queryClient.invalidateQueries({ queryKey: ['messages', chatId] })
+
+        sendMessage(text)
     }
 
 

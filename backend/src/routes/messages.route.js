@@ -7,13 +7,19 @@ export const router = express.Router()
 
 router.get('/:id/messages', requireAuth, async (req, res) => {
     const { id } = req.params;
-    const userId = req.userId;
+    const userId = req.userId
+
+    console.log(id, userId)
 
     const messages = await Message.find({ $and: [
             {chatId: Types.ObjectId.createFromHexString(id)},
-            {authorId: Types.ObjectId.createFromHexString(userId)}
+            { $or: [
+                    {authorId: Types.ObjectId.createFromHexString(userId)},
+                    {isSystem: true}
+                ]}
         ]}).populate('chatId').sort({createdAt: 1}).lean()
 
+    console.log(messages)
     res.status(200).json(messages)
 })
 
@@ -21,8 +27,6 @@ router.post('/:id/messages', requireAuth, async (req, res) => {
     const { id } = req.params;
     const { text } = req.body;
     const userId = req.userId;
-
-    console.log(req.body.text)
 
     await Message.create({
         chatId: Types.ObjectId.createFromHexString(id),

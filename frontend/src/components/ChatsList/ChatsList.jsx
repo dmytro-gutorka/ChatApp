@@ -2,11 +2,12 @@ import './chatsList.css'
 
 import useChats from "../../hooks/useChats";
 import ChatPreview from "../ChatPreview";
+import {useDebouncedValue} from "../../hooks/useDebouncedValue";
 
-export default function ChatsList() {
-    const { data, isSuccess } = useChats()
+export default function ChatsList({ search}) {
+    const debouncedSearch = useDebouncedValue(search, 300)
 
-    if (!isSuccess) return <div>Loading...</div>
+    const { data } = useChats(debouncedSearch)
 
     return (
         <ul className="chats-list">

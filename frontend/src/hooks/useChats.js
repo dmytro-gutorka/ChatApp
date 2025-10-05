@@ -7,5 +7,6 @@ export default function useChats(search) {
     return useQuery({
         queryKey,
         queryFn: () => getChats(search),
+        keepPreviousData: true
     })
 }
